@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ddev": "cargo clean && cargo build --release && vercel dev",
+    "fmt": "rustfmt api/**/*.rs --edition=2021"
   },
   "dependencies": {
     "react": "^18",
