@@ -3,13 +3,41 @@ name = "puzzle-solver"
 version = "0.1.0"
 edition = "2021"
 
-[[bin]]
-name = "main"
-path = "api/main.rs"
-
 [dependencies]
 puzzle-utils = "0.3.0"
 serde = "1.0.204"
 serde_json = "1.0.120"
 tokio = "1.38.0"
 vercel_runtime = "1.1.4"
+
+[[bin]]
+name = "maze-create"
+path = "api/maze/create.rs"
+
+[[bin]]
+name = "maze-solved"
+path = "api/maze/solved.rs"
+
+[[bin]]
+name = "maze-unsolved"
+path = "api/maze/unsolved.rs"
+
+[[bin]]
+name = "nonogram-solve"
+path = "api/nonogram/solve.rs"
+
+[[bin]]
+name = "nonogram-solved"
+path = "api/nonogram/solved.rs"
+
+[[bin]]
+name = "nonogram-unsolved"
+path = "api/nonogram/unsolved.rs"
+
+[[bin]]
+name = "sudoku-print"
+path = "api/sudoku/print.rs"
+
+[[bin]]
+name = "sudoku-solve"
+path = "api/sudoku/solve.rs"

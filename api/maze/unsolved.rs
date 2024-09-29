@@ -1,8 +1,13 @@
 use puzzle_utils::{image_to_png_bytes, print_maze, MazeNode};
 use serde::{Deserialize, Serialize};
 use vercel_runtime::{
-    http::bad_request, Body, Error, Request, RequestPayloadExt, Response, StatusCode,
+    http::bad_request, run, Body, Error, Request, RequestPayloadExt, Response, StatusCode,
 };
+
+#[tokio::main]
+async fn main() -> Result<(), Error> {
+    run(handler).await
+}
 
 #[derive(Deserialize)]
 struct PrintOptions {
